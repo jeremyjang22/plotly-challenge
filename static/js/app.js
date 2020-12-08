@@ -68,7 +68,7 @@ function buildPlot(ID){
 
         for(var i = 0; i < 10; i++){
             topTenValues.sample_values.push(sample_values[i]);
-            topTenValues.otu_ids.push(otu_ids[i]);
+            topTenValues.otu_ids.push(`OTU ${otu_ids[i]}`);
             topTenValues.otu_labels.push(otu_labels[i]);
         };
         console.log(topTenValues);
@@ -79,7 +79,7 @@ function buildPlot(ID){
             text: topTenValues.otu_labels,
             type: "bar",
             orientation: "h"
-        };
+        }
         var bar_data=[trace1];
         var bar_layout = {
             title: `Top 10 OTUs found in ${ID}`,
