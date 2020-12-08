@@ -48,16 +48,16 @@ function buildPlot(ID){
     console.log(ID);
     dataPromise.then(function(data){
         console.log(data);
-        var sample = data.samples.filter(sample => sample.id === ID);
-        console.log(sample);
+        var sample_data = data.samples.filter(sample => sample.id === ID);
+        console.log(sample_data);
 
-        var sample_values = sample[0].sample_values;
+        var sample_values = sample_data[0].sample_values;
         console.log(sample_values);
 
-        var otu_ids = sample[0].otu_ids;
+        var otu_ids = sample_data[0].otu_ids;
         console.log(otu_ids);
 
-        var otu_labels = sample[0].otu_labels;
+        var otu_labels = sample_data[0].otu_labels;
         console.log(otu_labels);
 
         var topTenValues = {
